@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+    .phones {
+        margin-right: 20px;
+    }
+    .container {
+      text-align: center;
+      max-width: 350px;
+      width: 100%;
+    }
+    .login-box {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 20px;
+      border-radius: 1px;
+      margin-bottom: 10px;
+    }
+    .login-box img {
+      width: 175px;
+      margin-bottom: 20px;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px -10px;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      font-size: 14px;
+      background-color: #fafafa;
+    }
+    .login-box input:focus {
+      outline: none;
+      border-color: #b2b2b2;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 8px;
+      background-color: #0095f6;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .login-box button:hover {
+      background-color: #0077e6;
+    }
+    .login-box .divider {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+    .login-box .divider .line {
+      flex: 1;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+    .login-box .divider span {
+      margin: 0 10px;
+      color: #8e8e8e;
+      font-size: 13px;
+    }
+    .login-box a {
+      color: #00376b;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .login-box a:hover {
+      text-decoration: underline;
+    }
+    .signup-box {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 15px;
+      border-radius: 1px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .signup-box a {
+      color: #0095f6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .signup-box a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #8e8e8e;
+      margin-top: auto;
+      padding: 20px;
+      background-color: #fff;
+    }
+    .footer a {
+      color: #00376b;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .language-selector {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .language-selector select {
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+    }
+    .app-download {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .app-download h3 {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .app-download .download-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <div class="phones">
+        <img src="phones.png" height="621px"/>
+    </div>
+    <div class="container">
+      <div class="login-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Logo">
+        <input type="text" placeholder="Телефон, имя пользователя или эл. адрес">
+        <input type="password" placeholder="Пароль">
+        <button>Войти</button>
+        <div class="divider">
+          <div class="line"></div>
+          <span>ИЛИ</span>
+          <div class="line"></div>
+        </div>
+        <a href="#">Войти через Facebook</a>
+        <div class="line"></div>
+        <a href="#">Забыли пароль?</a>
+      </div>
+      <div class="signup-box">
+        У вас ещё нет аккаунта? <a href="#">Зарегистрироваться</a>
+      </div>
+      <div class="app-download">
+        <h3>Установите приложение.</h3>
+        <div class="download-buttons">
+          <a id="google-play" href="">
+          <img src="play google.png" alt="Google Play" width="140px" height="45px"></a>
+          <a id="microsoft" href="">
+          <img src="microsoft.png" alt="Microsoft Store" width="140px" height="45px"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <a href="#">Meta</a>
+    <a href="#">Информация</a>
+    <a href="#">Блог</a>
+    <a href="#">Вакансии</a>
+    <a href="#">Помощь</a>
+    <a href="#">API</a>
+    <a href="#">конфиденциальность</a>
+    <a href="#">Условия</a>
+    <a href="#">Места</a>
+    <a href="#">Instagram Lite</a>
+    <a href="#">Threads</a>
+    <a href="#">Загрузка контактов и лица, не являющиеся пользователями</a>
+    <a href="#">Meta Verified</a>
+    <br>
+    <div class="language-selector">
+      <label for="language">Language:</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+    <span>© 2025 Instagram from Meta</span>
+  </div>
+</body>
+</html>
