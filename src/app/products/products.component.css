@@ -1,9 +1,9 @@
 .product-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers products horizontally */
-  gap: 20px; /* Adds spacing between products */
-  padding: 20px; /* Adds padding to prevent items from touching the edges */
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .product-card {
