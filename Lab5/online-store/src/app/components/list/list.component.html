@@ -1,10 +1,9 @@
 <div class="product-container">
-  <h2>Category: {{ category }}</h2>
-  <div *ngFor="let product of products[category]">
-    <app-items 
-      [product]="product" 
-      (remove)="removeProduct(product)" 
-      (like)="increaseLikes(product)">
-    </app-items>
+  <div class="product" *ngFor="let product of products[category]">
+    <app-items
+      [product]="product"
+      (remove)="removeProduct(product)"
+      (like)="increaseLikes(product)"
+    ></app-items>
   </div>
 </div>

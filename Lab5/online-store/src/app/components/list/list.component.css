@@ -1,0 +1,10 @@
+.product-container {
+    display: flex;
+    justify-content: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .product {
+    width: 200px;
+  }  
