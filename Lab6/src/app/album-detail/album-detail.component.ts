@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';  // ✅ Required for [(ngModel)]
+import { FormsModule } from '@angular/forms';
 
 @Component({
   standalone: true,
   selector: 'app-album-detail',
   templateUrl: './album-detail.component.html',
   styleUrls: ['./album-detail.component.css'],
-  imports: [CommonModule, RouterModule, FormsModule] // ✅ Ensure FormsModule is included
+  imports: [CommonModule, RouterModule, FormsModule]
 })
 export class AlbumDetailComponent {
-  newTitle: string = ''; // ✅ This fixes the error!
+  newTitle: string = '';
 }

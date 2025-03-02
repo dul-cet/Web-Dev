@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-albums',
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.css'],
-  imports: [CommonModule, RouterModule] // ✅ Required for *ngFor and routerLink
+  imports: [CommonModule, RouterModule]
 })
 export class AlbumsComponent {
   albums = [
