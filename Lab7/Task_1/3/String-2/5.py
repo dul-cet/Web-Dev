@@ -1,10 +1,4 @@
-def last2(str):
-  if len(str) < 2:
-    return 0
-  last2 = str[len(str)-2:]
-  count = 0
-  for i in range(len(str)-2):
-    sub = str[i:i+2]
-    if sub == last2:
-      count = count + 1
-  return count
+def end_other(a, b):
+    a_lower = a.lower()
+    b_lower = b.lower()
+    return a_lower.endswith(b_lower) or b_lower.endswith(a_lower)

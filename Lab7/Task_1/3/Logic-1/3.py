@@ -1,6 +1,5 @@
-def string_bits(str):
-  result = ""
-  for i in range(len(str)):
-    if i % 2 == 0:
-      result = result + str[i]
-  return result
+def squirrel_play(temp, is_summer):
+  if is_summer:
+    return 60 <= temp <=100
+  else:
+    return 60 <= temp <=90

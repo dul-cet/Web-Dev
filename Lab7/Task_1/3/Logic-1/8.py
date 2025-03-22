@@ -1,5 +1,5 @@
-def array123(nums):
-  for i in range(len(nums)-2):
-    if nums[i]==1 and nums[i+1]==2 and nums[i+2]==3:
-      return True
-  return False
+def in1to10(n, outside_mode):
+    if outside_mode:
+        return n <= 1 or n >= 10
+    else:
+        return 1 <= n <= 10

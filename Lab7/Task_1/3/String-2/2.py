@@ -1,10 +1,6 @@
-def front_times(str, n):
-  front_len = 3
-  if front_len > len(str):
-    front_len = len(str)
-  front = str[:front_len]
-  
-  result = ""
-  for i in range(n):
-    result = result + front
-  return result
+def count_hi(str):
+    count = 0
+    for i in range(len(str) - 1):
+        if str[i:i+2] == 'hi':
+            count += 1
+    return count

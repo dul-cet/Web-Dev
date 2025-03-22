@@ -1,5 +1,6 @@
-def string_splosion(str):
-  result = ""
-  for i in range(len(str)):
-    result = result + str[:i+1]
-  return result
+def count_code(str):
+    count = 0
+    for i in range(len(str) - 3):
+        if str[i:i+2] == 'co' and str[i+3] == 'e':
+            count += 1
+    return count

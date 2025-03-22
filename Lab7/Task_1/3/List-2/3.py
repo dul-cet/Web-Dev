@@ -1,6 +1,4 @@
-def string_bits(str):
-  result = ""
-  for i in range(len(str)):
-    if i % 2 == 0:
-      result = result + str[i]
-  return result
+def centered_average(nums):
+    nums.sort()
+    total = sum(nums) - nums[0] - nums[-1]
+    return total // (len(nums) - 2)

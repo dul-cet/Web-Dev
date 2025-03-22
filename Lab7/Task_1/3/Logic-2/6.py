@@ -1,6 +1,7 @@
-def array_count9(nums):
-  count = 0
-  for num in nums:
-    if num == 9:
-      count = count + 1
-  return count
+def close_far(a, b, c):
+    if abs(a - b) <= 1 and abs(a - c) >= 2 and abs(b - c) >= 2:
+        return True
+    elif abs(a - c) <= 1 and abs(a - b) >= 2 and abs(b - c) >= 2:
+        return True
+    else:
+        return False

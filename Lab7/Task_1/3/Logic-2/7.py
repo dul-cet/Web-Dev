@@ -1,9 +1,7 @@
-def array_front9(nums):
-  end = len(nums)
-  if end > 4:
-    end = 4
-  
-  for i in range(end):
-    if nums[i] == 9:
-      return True
-  return False
+def make_chocolate(small, big, goal):
+    max_big_bars = goal // 5
+    big_bars_used = min(big, max_big_bars)
+    remaining_goal = goal - (big_bars_used * 5)
+    if remaining_goal <= small:
+        return remaining_goal
+    return -1

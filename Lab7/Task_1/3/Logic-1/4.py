@@ -1,5 +1,10 @@
-def string_splosion(str):
-  result = ""
-  for i in range(len(str)):
-    result = result + str[:i+1]
-  return result
+def caught_speeding(speed, is_birthday):
+    if is_birthday:
+        speed -= 5
+
+    if speed <= 60:
+        return 0
+    elif 61 <= speed <= 80:
+        return 1
+    else:
+        return 2

@@ -1,5 +1,2 @@
-def string_times(str, n):
-  result = ""
-  for i in range(n):
-    result += str
-  return result
+def make_bricks(small, big, goal):
+    return goal <= small + 5 * big and goal % 5 <= small

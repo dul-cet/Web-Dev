@@ -1,6 +1,11 @@
-def array_count9(nums):
-  count = 0
-  for num in nums:
-    if num == 9:
-      count = count + 1
-  return count
+def alarm_clock(day, vacation):
+    if vacation:
+        if 1 <= day <= 5:
+            return '10:00'
+        else:
+            return 'off'
+    else:
+        if 1 <= day <= 5:
+            return '7:00'
+        else:
+            return '10:00'

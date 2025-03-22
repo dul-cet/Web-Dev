@@ -1,6 +1,5 @@
-def array_count9(nums):
-  count = 0
-  for num in nums:
-    if num == 9:
-      count = count + 1
-  return count
+def has22(nums):
+    for i in range(len(nums) - 1):
+        if nums[i] == 2 and nums[i + 1] == 2:
+            return True
+    return False

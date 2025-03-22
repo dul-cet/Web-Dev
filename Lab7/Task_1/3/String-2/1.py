@@ -1,5 +1,5 @@
-def string_times(str, n):
-  result = ""
-  for i in range(n):
-    result += str
-  return result
+def double_char(str):
+    result = ''
+    for char in str:
+        result += char * 2
+    return result

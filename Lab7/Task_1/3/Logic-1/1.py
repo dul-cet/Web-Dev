@@ -1,5 +1,5 @@
-def string_times(str, n):
-  result = ""
-  for i in range(n):
-    result += str
-  return result
+def cigar_party(cigars, is_weekend):
+    if is_weekend:
+        return cigars >= 40
+    else:
+        return 40 <= cigars <= 60

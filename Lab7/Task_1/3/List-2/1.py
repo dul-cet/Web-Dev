@@ -1,5 +1,6 @@
-def string_times(str, n):
-  result = ""
-  for i in range(n):
-    result += str
-  return result
+def count_evens(nums):
+    count = 0
+    for num in nums:
+        if num % 2 == 0:
+            count += 1
+    return count

@@ -1,6 +1,9 @@
-def string_bits(str):
-  result = ""
-  for i in range(len(str)):
-    if i % 2 == 0:
-      result = result + str[i]
-  return result
+def lucky_sum(a, b, c):
+    if a == 13:
+        return 0
+    elif b == 13:
+        return a
+    elif c == 13:
+        return a + b
+    else:
+        return a + b + c

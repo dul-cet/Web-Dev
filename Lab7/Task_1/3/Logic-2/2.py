@@ -1,10 +1,14 @@
-def front_times(str, n):
-  front_len = 3
-  if front_len > len(str):
-    front_len = len(str)
-  front = str[:front_len]
-  
-  result = ""
-  for i in range(n):
-    result = result + front
-  return result
+def lone_sum(a, b, c):
+    if a != b and a != c:
+        sum_a = a
+    else:
+        sum_a = 0
+    if b != a and b != c:
+        sum_b = b
+    else:
+        sum_b = 0
+    if c != a and c != b:
+        sum_c = c
+    else:
+        sum_c = 0
+    return sum_a + sum_b + sum_c

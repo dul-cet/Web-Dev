@@ -1,6 +1,5 @@
-def array_count9(nums):
-  count = 0
-  for num in nums:
-    if num == 9:
-      count = count + 1
-  return count
+def xyz_there(str):
+    for i in range(len(str) - 2):
+        if str[i:i+3] == 'xyz' and (i == 0 or str[i-1] != '.'):
+            return True
+    return False
