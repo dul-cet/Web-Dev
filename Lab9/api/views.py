@@ -36,15 +36,23 @@ def company_vacancies(request, id):
     except Company.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
-    vacancies = company.vacancy_set.all()
+    vacancies = company.vacancies.all()
     serializer = VacancySerializer(vacancies, many=True)
     return Response(serializer.data)
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def vacancy_list(request):
-    vacancies = Vacancy.objects.all()
-    serializer = VacancySerializer(vacancies, many=True)
-    return Response(serializer.data)
+    if request.method == 'GET':
+        vacancies = Vacancy.objects.all()
+        serializer = VacancySerializer(vacancies, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = VacancySerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
 def vacancy_detail(request, id):
